@@ -1,0 +1,18 @@
+version: "2"
+
+networks:
+  default:
+    external:
+      name: bcielg
+
+
+services:
+
+  noti-api:
+    image: noti:5
+    container_name: noti-api
+    ports:
+      - "8005:8005"
+
+    networks:
+      - default

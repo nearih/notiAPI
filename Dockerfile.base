@@ -1,0 +1,11 @@
+FROM golang:1.12.7
+
+ENV GO111MODULE=on
+
+RUN mkdir -p /go/src/noti
+
+WORKDIR /go/src/noti 
+
+COPY . .
+ 
+RUN go mod tidy
